@@ -3,8 +3,10 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: "NAME"
+        description: set_names
         required: true
+        type: string
+        default: そういことね
 
   push:
     branches:
@@ -15,4 +17,4 @@ jobs:
     name: Greeting
     runs-on: ubuntu-latest
     steps:
-      - run: echo "test ${{github.event.inputs.name}}"
+      - run: echo "test ${{inputs.name}}"
