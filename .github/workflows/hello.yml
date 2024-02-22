@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: テスト
+        description: 'NAME'
         required: true
 
   push:
@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    name: Greeting
     runs-on: ubuntu-latest
     steps:
+        name: Greeting
       - run: echo "test ${{github.event.inputs.name}}"
