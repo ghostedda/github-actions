@@ -17,4 +17,4 @@ jobs:
     name: Greeting
     runs-on: ubuntu-latest
     steps:
-      - run: echo "test ${{inputs.name}}"
+      - run: echo "test ${{git.env.inputs.name}}"
