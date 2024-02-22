@@ -15,4 +15,4 @@ jobs:
     name: Greeting
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{inputs.name}}
+      - run: echo "test ${{inputs.name}}"
